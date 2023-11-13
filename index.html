@@ -101,7 +101,7 @@
                                 </div>
 
                                 <div class="d-flex gap-4">
-                                    <button type="submit" class="btn btn-primary w-100 py-2">Submit</button>
+                                    <button type="submit" onclick="setDatatableDisplay()" class="btn btn-primary w-100 py-2">Submit</button>
                                     <button type="button" onclick="window.location.reload()" class="btn btn-secondary w-100 py-2">Clear Search</button>
                                 </div>
                             </form>
@@ -161,17 +161,16 @@
     </div>
     <!-- end of tabs -->
     <!-- start of datatable -->
-  <section class="container bg-white mt-4 p-4 pt-5">
+  <section class="container bg-white mt-4 p-4 pt-5" id="hidden-datatable">
     <h3 class="mb-3">Search Results</h3>
     <table id="example" class="table table-striped" style="width:100%">
         <thead>
             <tr>
+                <th>No</th>
                 <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
+                <th>Program</th>
+                <th>Postal Address</th>
+                <th>Print Letter</th>
             </tr>
         </thead>
         <tbody>
@@ -181,7 +180,6 @@
                 <td>Edinburgh</td>
                 <td>61</td>
                 <td>2011-04-25</td>
-                <td>$320,800</td>
             </tr>
             <tr>
                 <td>Garrett Winters</td>
@@ -634,20 +632,31 @@
         </tbody>
         <tfoot>
             <tr>
+                <th></th>
                 <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
+                <th>Program</th>
+                <th>Postal Address</th>
+                <th>Print Letter</th>
             </tr>
         </tfoot>
     </table>
   </section>
       <!-- end of datatable -->
+
+      <!-- start of footer -->
+      <footer class="bg-primary p-4 mt-4 text-white d-flex justify-content-center align-items-center">
+        <span>© <script>document.write(new Date().getFullYear());</script>, MIS Section, DICTS, University of Cape Coast </span>
+      </footer>
+      <!-- end of footer -->
     <!-- start of script -->
     <script>
         new DataTable('#example');
+
+        // getting the datatables to show
+       function setDatatableDisplay (){
+        const hiddenElement = getElementById('hidden-datatable');
+        hiddenElement.style.display = 'display';
+       }
     </script>
     <!-- end of script -->
 </body>
