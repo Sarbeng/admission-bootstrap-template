@@ -48,7 +48,7 @@
                     <a class="nav-link text-white" href="#">Important Forms</a>
                 </li>
                 <li class="nav-item">
-                    <a class=" btn bg-white text-primary" href="/registration_number.html" role="button">Registration Number</a>
+                    <a class=" btn bg-white text-primary" href="#" role="button">Registration Number</a>
 
                 </li>
             </ul>
@@ -60,12 +60,12 @@
     <!-- Nav tabs -->
     <div class="container p-0 mt-5 border bg-white">
         <ul class="nav nav-tabs nav-justified bg-primary" id="myTab" role="tablist">
+          
             <li class="nav-item">
-                <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
-                    <h2 class="text-capitalize p-2">Search for Admission letter</h2>
+                <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">
+                    <h2 class="text-capitalize p-2">find Registration Number</h2>
                 </a>
             </li>
-            
 
         </ul>
 
@@ -73,37 +73,7 @@
         <div class="tab-content p-3">
             <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
                 <div class="row">
-                    <div class="col-sm P-2">
-                        <div class="container p-5 mx-3 w-100">
-                            <!-- <h3>Search for your Admission Letter</h3>
-                            <p class="text-muted">Enter in either your first name, surname or even search by programme.</p> -->
-                            <form action="">
-                                <div class="form-group mb-3">
-                                    <label for="firstname">Firstname</label>
-                                    <input type="text" class="form-control" id="email" pl>
-                                </div>
-                                <div class="form-group mb-3">
-                                    <label for="surname">Surname</label>
-                                    <input type="text" class="form-control" id="pwd">
-                                </div>
-                                <div class="form-group mb-5">
-                                    <label for="exampleFormControlSelect1">Programme of Study</label>
-                                    <select class="form-control text-muted" id="exampleFormControlSelect1">
-                                    <option disabled selected >Select programme</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                  </select>
-                                </div>
-
-                                <div class="d-flex gap-4">
-                                    <button type="submit" onclick="setDatatableDisplay()" class="btn btn-primary w-100 py-2">Submit</button>
-                                    <button type="button" onclick="window.location.reload()" class="btn btn-secondary w-100 py-2">Clear Search</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+                  
                     <!-- <div class="col-sm p-2 justify-content-center w-50">
                         <div class="pt-5">
                           <img src="img2.svg" />
@@ -112,74 +82,52 @@
                     </div> -->
                 </div>
             </div>
-           
+            <div class="" id="profile" role="" aria-labelledby="profile-tab">
+                <div class="row">
+                    <div class="col-sm P-2">
+                        <div class="container p-5 mx-3 w-100">
+                            <h3>Find Registration number</h3>
+                            <p class="text-muted">Enter in either your first name, surname or even search by programme.</p>
+                            <form action="/action_page.php">
+                                <div class="form-group mb-3">
+                                    <label for="email">Reference number:</label>
+                                    <input type="text" class="form-control" id="email" pl>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="pwd">Firstname:</label>
+                                    <input type="text" class="form-control" id="pwd">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="pwd">Surname:</label>
+                                    <input type="text" class="form-control" id="pwd">
+                                </div>
+
+                                <div class="form-group mb-3">
+                                    <label for="pwd">Cellphone:</label>
+                                    <input type="number" class="form-control" id="pwd">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="pwd">Date of birth:</label>
+                                    <input type="date" data-provide="datepicker-inline" class="form-control" id="pwd">
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-sm p-2 justify-content-center w-auto">
+                        <div class="pt-5">
+                            <img src="img3.svg" />
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div>
     </div>
     <!-- end of tabs -->
-    <!-- start of datatable -->
-  <section class="container bg-white mt-4 p-4 pt-5" id="hidden-datatable">
-    <h3 class="mb-3">Search Results</h3>
-    <table id="example" class="table table-striped" style="width:100%">
-        <thead>
-            <tr>
-                <th>No</th>
-                <th>Name</th>
-                <th>Program</th>
-                <th>Postal Address</th>
-                <th>Print Letter</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>Tiger Nixon</td>
-                <td>BACHELOR OF COMMERCE ( HUMAN RESOURCE MANAGEMENT )</td>
-                <td>Edinburgh</td>
-                <td><button type="button" class="btn py-2 px-3 d-flex gap-2  btn-primary"  > <img class="img-fluid" src="./print-solid.svg"/></button></td>
-               
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Ashton Cox</td>
-                <td>BACHELOR OF COMMERCE ( HUMAN RESOURCE MANAGEMENT )</td>
-                <td>San Francisco</td>
-               
-                <td><button type="button" class="btn py-2 px-3 d-flex gap-2  btn-primary"  > <img class="img-fluid" src="./print-solid.svg"/> </button></td>
-              
-            </tr>
-          
-          
-            <tr>
-                <td>3</td>
-                <td>Michael Bruce</td>
-                <td>BACHELOR OF COMMERCE ( HUMAN RESOURCE MANAGEMENT )</td>
-                <td>Singapore</td>
-                
-                <td><button type="button" class="btn py-2 px-3 d-flex gap-2  btn-primary"  > <img class="img-fluid" src="./print-solid.svg"/> </button></td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>Donna Snider</td>
-                <td>BACHELOR OF COMMERCE ( HUMAN RESOURCE MANAGEMENT )</td>
-                <td>New York</td>
-                
-                <td><button type="button" class="btn py-2 px-3 d-flex gap-2  btn-primary"  > <img class="img-fluid" src="./print-solid.svg"/></button></td>
-             
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <th>No</th>
-                <th>Name</th>
-                <th>Program</th>
-                <th>Postal Address</th>
-                <th>Print Letter</th>
-            </tr>
-        </tfoot>
-    </table>
-  </section>
-      <!-- end of datatable -->
+  
 
       <!-- start of footer -->
       <footer class="bg-primary p-4 mt-4 text-white d-flex justify-content-center align-items-center">
